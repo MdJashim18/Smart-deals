@@ -8,8 +8,7 @@ const port = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
-// const uri = "mongodb+srv://SmartDealsUser:xzEzGBmN2KcsQIDo@mongo-simple-crud.tzwys72.mongodb.net/?appName=Mongo-simple-crud";
-// console.log(process.env)
+
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@mongo-simple-crud.tzwys72.mongodb.net/?appName=Mongo-simple-crud`;
 
 const client = new MongoClient(uri, {
